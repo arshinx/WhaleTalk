@@ -108,7 +108,7 @@ class AllChatsViewController: UIViewController, TableViewFetchedResultsDisplayer
         
         newGroupButton.setTitle("New Group", forState: .Normal)
         newGroupButton.setTitleColor(view.tintColor, forState: .Normal)
-        newGroupButton.addTarget(self, action: "pressedNewGroup", forControlEvents: .TouchUpInside)
+        newGroupButton.addTarget(self, action: #selector(AllChatsViewController.pressedNewGroup), forControlEvents: .TouchUpInside)
         
         let border = UIView()
         border.translatesAutoresizingMaskIntoConstraints = false
