@@ -23,8 +23,8 @@ class NewGroupViewController: UIViewController {
         title = "New Group"
         
         view.backgroundColor = UIColor.whiteColor()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancel")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: "next")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(NewGroupViewController.cancel))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: #selector(NewGroupViewController.next))
         updateNextButton(forCharCount: 0)
         
         subjectField.placeholder = "Group Subject"
