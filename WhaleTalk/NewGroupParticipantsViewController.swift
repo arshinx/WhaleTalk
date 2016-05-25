@@ -33,7 +33,7 @@ class NewGroupParticipantsViewController: UIViewController {
         
         title = "Add Participants"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .Plain, target: self, action: "createChat")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create", style: .Plain, target: self, action: #selector(NewGroupParticipantsViewController.createChat))
         showCreateButton(false)
         
         automaticallyAdjustsScrollViewInsets = false

@@ -21,7 +21,7 @@ class Syncer: NSObject {
         self.backgroundContext = backgroundContext
         super.init()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mainContextSaved:"), name: NSManagedObjectContextDidSaveNotification, object: mainContext)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(Syncer.mainContextSaved(_:)), name: NSManagedObjectContextDidSaveNotification, object: mainContext)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("backgroundContextSaved:"), name: NSManagedObjectContextDidSaveNotification, object: backgroundContext)
     }
  

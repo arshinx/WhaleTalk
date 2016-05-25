@@ -32,7 +32,7 @@ class SignUpViewController: UIViewController {
         let continueButton = UIButton()
         continueButton.setTitle("Continue", forState: .Normal)
         continueButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        continueButton.addTarget(self, action: "pressedContinue:", forControlEvents: .TouchUpInside)
+        continueButton.addTarget(self, action: #selector(SignUpViewController.pressedContinue(_:)), forControlEvents: .TouchUpInside)
         view.addSubview(continueButton)
         
         phoneNumberField.keyboardType = .PhonePad
