@@ -54,6 +54,7 @@
 		6FE35E911C2A50A5006387A5 /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE35E901C2A50A5006387A5 /* CDHelper.swift */; };
 		6FE35E941C2A536C006387A5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FE35E921C2A536C006387A5 /* Model.xcdatamodeld */; };
 		6FE35E9C1C2A569D006387A5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE35E9A1C2A569D006387A5 /* Message.swift */; };
+		739E70701CF526B900B33907 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739E706F1CF526B900B33907 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,8 @@
 		6FE35E901C2A50A5006387A5 /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
 		6FE35E931C2A536C006387A5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6FE35E9A1C2A569D006387A5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		739E706E1CF526B900B33907 /* WhaleTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WhaleTalk.entitlements; sourceTree = "<group>"; };
+		739E706F1CF526B900B33907 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 				6F8A6F191CAC7B5B000606DF /* Security.framework in Frameworks */,
 				6F8A6F171CAC7B53000606DF /* CFNetwork.framework in Frameworks */,
 				6F8A6F151CAC7B49000606DF /* libc++.tbd in Frameworks */,
+				739E70701CF526B900B33907 /* AudioToolbox.framework in Frameworks */,
 				6F8A6F131CAC7B3A000606DF /* libicucore.tbd in Frameworks */,
 				6F8A6F111CAC7AAD000606DF /* Firebase.framework in Frameworks */,
 			);
@@ -128,6 +132,7 @@
 		6F12F1A11C0F6FAA0010DD2C = {
 			isa = PBXGroup;
 			children = (
+				739E706F1CF526B900B33907 /* AudioToolbox.framework */,
 				6F8A6EB71CA49080000606DF /* PhoneNumber+CoreDataProperties.swift */,
 				6F8A6EB81CA49080000606DF /* PhoneNumber.swift */,
 				6FD1E4711C90EAC300898D0A /* Contact+CoreDataProperties.swift */,
@@ -152,6 +157,7 @@
 		6F12F1AC1C0F6FAA0010DD2C /* WhaleTalk */ = {
 			isa = PBXGroup;
 			children = (
+				739E706E1CF526B900B33907 /* WhaleTalk.entitlements */,
 				6F12F1AD1C0F6FAA0010DD2C /* AppDelegate.swift */,
 				6F8A6EA91CA32DB5000606DF /* ContactsVC */,
 				6F8A6EAA1CA32DC0000606DF /* AllChatsVC */,
@@ -328,10 +334,19 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = bitfountain;
+				ORGANIZATIONNAME = "Arshin Jain";
 				TargetAttributes = {
 					6F12F1A91C0F6FAA0010DD2C = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 29YN3QBTM8;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -521,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WhaleTalk/WhaleTalk.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -537,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WhaleTalk/WhaleTalk.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
