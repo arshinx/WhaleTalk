@@ -71,7 +71,7 @@ class AllChatsViewController: UIViewController, TableViewFetchedResultsDisplayer
     
     func fakeData() {
         guard let context = context else {return}
-        let chat = NSEntityDescription.insertNewObjectForEntityForName("Chat", inManagedObjectContext: context) as? Chat
+        _ = NSEntityDescription.insertNewObjectForEntityForName("Chat", inManagedObjectContext: context) as? Chat
     }
     
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
