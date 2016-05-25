@@ -2,8 +2,6 @@
 //  FirebaseStore.swift
 //  WhaleTalk
 //
-//  Created by Eliot Arntz on 3/30/16.
-//  Copyright © 2016 bitfountain. All rights reserved.
 //
 
 import Foundation
@@ -12,7 +10,7 @@ import CoreData
 
 class FirebaseStore {
     private let context:NSManagedObjectContext
-    private let rootRef = Firebase(url: "https://eliotwhaletalk.firebaseio.com")
+    private let rootRef = Firebase(url: "https://whaletalkx.firebaseio.com/") // update firebase url
     
     private(set) static var currentPhoneNumber:String? {
         set(phoneNumber){
