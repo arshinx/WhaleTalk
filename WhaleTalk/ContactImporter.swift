@@ -21,7 +21,7 @@ class ContactImporter: NSObject {
     
     func listenForChanges() {
         CNContactStore.authorizationStatusForEntityType(.Contacts)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addressBookDidChange:", name: CNContactStoreDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ContactImporter.addressBookDidChange(_:)), name: CNContactStoreDidChangeNotification, object: nil)
     }
     
     func addressBookDidChange(notification: NSNotification) {
