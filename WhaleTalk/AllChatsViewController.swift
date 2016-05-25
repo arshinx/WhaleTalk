@@ -24,7 +24,7 @@ class AllChatsViewController: UIViewController, TableViewFetchedResultsDisplayer
         super.viewDidLoad()
 
         title = "Chats"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "new_chat"), style: .Plain, target: self, action: "newChat")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "new_chat"), style: .Plain, target: self, action: #selector(AllChatsViewController.newChat))
         
         automaticallyAdjustsScrollViewInsets = false
         
