@@ -64,7 +64,7 @@ class ChatViewController: UIViewController {
         newMessageArea.addSubview(sendButton)
         
         sendButton.setTitle("Send", forState: .Normal)
-        sendButton.addTarget(self, action: Selector("pressedSend:"), forControlEvents: .TouchUpInside)
+        sendButton.addTarget(self, action: #selector(ChatViewController.pressedSend(_:)), forControlEvents: .TouchUpInside)
         sendButton.setContentHuggingPriority(251, forAxis: .Horizontal)
         sendButton.setContentCompressionResistancePriority(751, forAxis: .Horizontal)
         
@@ -106,9 +106,9 @@ class ChatViewController: UIViewController {
         ]
         NSLayoutConstraint.activateConstraints(tableViewConstraints)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
         if let mainContext = context?.parentContext ?? context {
             NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("contextUpdated:"), name: NSManagedObjectContextObjectsDidChangeNotification, object: mainContext)
