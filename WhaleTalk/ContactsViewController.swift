@@ -27,7 +27,7 @@ class ContactsViewController: UIViewController, ContextViewController, TableView
         super.viewDidLoad()
         
         navigationController?.navigationBar.topItem?.title = "All Contacts"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "add"), style: .Plain, target: self, action: "newContact")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "add"), style: .Plain, target: self, action: #selector(ContactsViewController.newContact))
         
         automaticallyAdjustsScrollViewInsets = false
         
